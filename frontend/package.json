@@ -8,6 +8,10 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "allowScripts": {
+    "esbuild": true,
+    "esbuild@0.18.20": true
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
