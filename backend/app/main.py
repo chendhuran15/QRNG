@@ -336,6 +336,15 @@ def calculate_frequency_block_test(bits: str, block_size: int = 20) -> Tuple[flo
 
 # --- API Endpoints ---
 
+@app.get("/")
+async def root():
+    return {
+        "status": "online",
+        "service": "Quantum Random Number Generator Auth Server",
+        "docs": "/docs",
+        "version": "1.0.0"
+    }
+
 @app.get("/api/devices", response_model=List[str])
 async def get_registered_devices():
     """
