@@ -64,7 +64,7 @@ async function computeHMAC(secret, message) {
 }
 
 export default function App() {
-  const BACKEND_URL = "";
+  const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
   
   // App States
   const [activeTab, setActiveTab] = useState("console"); // console or replay

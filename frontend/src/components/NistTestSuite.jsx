@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export default function NistTestSuite() {
-  const BACKEND_URL = "";
+  const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
   
   const [loading, setLoading] = useState(false);
   const [nistData, setNistData] = useState(null);

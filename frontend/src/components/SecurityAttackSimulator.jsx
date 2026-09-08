@@ -49,7 +49,7 @@ async function computeHMAC(secret, message) {
 }
 
 export default function SecurityAttackSimulator() {
-  const BACKEND_URL = "";
+  const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
   
   // Selected Attack tab: "replay", "guess", "reuse", "brute"
   const [activeAttack, setActiveAttack] = useState("replay");

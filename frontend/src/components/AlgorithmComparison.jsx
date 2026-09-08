@@ -116,7 +116,7 @@ function bitsToHex(bits) {
 }
 
 export default function AlgorithmComparison() {
-  const BACKEND_URL = "";
+  const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
   const [isRunning, setIsRunning] = useState(false);
   const [hasRun, setHasRun] = useState(false);
   const [activeStepFilter, setActiveStepFilter] = useState("all");

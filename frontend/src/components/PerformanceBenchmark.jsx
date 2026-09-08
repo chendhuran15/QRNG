@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 export default function PerformanceBenchmark() {
-  const BACKEND_URL = "";
+  const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
   
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
